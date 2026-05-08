@@ -1,0 +1,42 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Fruit Slice"
+run/main_scene="uid://main001"
+config/features=PackedStringArray("4.6", "Mobile")
+config/icon="res://icon.svg"
+
+[input]
+
+restart={
+"deadzone": 0.5,
+"events": [{
+"id": "keyboard_key_space",
+"keycode": "Key Space",
+"type": 4
+}]
+}
+
+[physics]
+
+2d/physics_engine="Default"
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+rendering_device/driver.windows="d3d12"
+renderer/rendering_method="mobile"
+environment/defaults/default_clear_color=Color(0.08, 0.08, 0.18, 1)
+
+[run]
+
+main_scene="res://scenes/main.tscn"
